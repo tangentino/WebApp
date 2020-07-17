@@ -4,13 +4,7 @@
 <titles>HOME PAGE</title>
 <body>
 <h2>
-    This is content of home page ahaha
+    HELLO ${username}
 </h2>
-<h3>
-    <%
-        Date date = new Date();
-        out.println(date);
-    %>
-</h3>
 </body>
 </html>
