@@ -2,6 +2,7 @@ package io.muzoo.ooc.webapp.basic;
 
 import io.muzoo.ooc.webapp.basic.servlets.HomeServlet;
 import io.muzoo.ooc.webapp.basic.servlets.LoginServlet;
+import io.muzoo.ooc.webapp.basic.servlets.LogoutServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
@@ -26,9 +27,13 @@ public class WebApp {
             // Trick: mapping with index.jsp, allow access to root path "/"
             ctx.addServletMapping("/index.jsp",HomeServlet.class.getSimpleName());
 
-            LoginServlet admin = new LoginServlet();
-            Tomcat.addServlet(ctx,LoginServlet.class.getSimpleName(),admin);
+            LoginServlet loginServlet = new LoginServlet();
+            Tomcat.addServlet(ctx,LoginServlet.class.getSimpleName(),loginServlet);
             ctx.addServletMapping("/login",LoginServlet.class.getSimpleName());
+
+            LogoutServlet logoutServlet = new LogoutServlet();
+            Tomcat.addServlet(ctx,LogoutServlet.class.getSimpleName(),logoutServlet);
+            ctx.addServletMapping("/logout",LogoutServlet.class.getSimpleName());
 
             tomcat.start();
             tomcat.getServer().await();
