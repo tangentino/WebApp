@@ -17,20 +17,14 @@ public class LoginServlet extends AbstractRoutableHttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
         String error = "";
 
         // authentication
-        if (username != null && username.equals("admin") && password != null && password.equals("12345")) {
-            HttpSession session = request.getSession();
-            session.setAttribute("username",username);
-
+        if (securityService.login(request)) {
             response.sendRedirect("/");
         }
         else {
             error = "Incorrect username or password. Please try again.";
-
             request.setAttribute("error",error);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/login.jsp");
             requestDispatcher.include(request,response);
