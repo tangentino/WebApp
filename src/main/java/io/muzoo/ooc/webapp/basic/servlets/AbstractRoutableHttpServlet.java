@@ -1,4 +1,6 @@
 package io.muzoo.ooc.webapp.basic.servlets;
 
-public abstract class AbstractRoutableHttpServlet {
+import javax.servlet.http.HttpServlet;
+
+public abstract class AbstractRoutableHttpServlet extends HttpServlet implements Routable {
 }

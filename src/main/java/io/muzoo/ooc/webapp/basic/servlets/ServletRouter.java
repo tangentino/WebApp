@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ServletRouter {
 
-    private static final List<Class<? extends HttpServlet>> servletClasses = new ArrayList<>();
+    private static final List<Class<? extends AbstractRoutableHttpServlet>> servletClasses = new ArrayList<>();
 
     static {
         servletClasses.add(HomeServlet.class);
@@ -19,12 +19,12 @@ public class ServletRouter {
 
     public void initialize(Context ctx) {
 
-        for (Class<? extends HttpServlet> servletClass: servletClasses) {
+        for (Class<? extends AbstractRoutableHttpServlet> servletClass: servletClasses) {
             try {
-                HttpServlet httpServlet = servletClass.newInstance();
+                AbstractRoutableHttpServlet httpServlet = servletClass.newInstance();
                 Tomcat.addServlet(ctx,servletClass.getSimpleName(),httpServlet);
                 // Trick: mapping with index.jsp, allow access to root path "/"
-                ctx.addServletMapping("/index.jsp",HomeServlet.class.getSimpleName());
+                ctx.addServletMapping(httpServlet.getPattern(),servletClass.getSimpleName());
             }
             catch (InstantiationException e) {
                 e.printStackTrace();
@@ -33,15 +33,5 @@ public class ServletRouter {
                 e.printStackTrace();
             }
         }
-        HomeServlet home = new HomeServlet();
-
-
-        LoginServlet loginServlet = new LoginServlet();
-        Tomcat.addServlet(ctx,LoginServlet.class.getSimpleName(),loginServlet);
-        ctx.addServletMapping("/login",LoginServlet.class.getSimpleName());
-
-        LogoutServlet logoutServlet = new LogoutServlet();
-        Tomcat.addServlet(ctx,LogoutServlet.class.getSimpleName(),logoutServlet);
-        ctx.addServletMapping("/logout",LogoutServlet.class.getSimpleName());
     }
 }
