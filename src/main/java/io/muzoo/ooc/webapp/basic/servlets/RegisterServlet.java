@@ -16,9 +16,13 @@ public class RegisterServlet extends AbstractRoutableHttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("info","Error has occurred");
         if (securityService.addUser(request)) {
             response.sendRedirect("/");
+        }
+        else {
+            request.setAttribute("info","Registration failed. Please try again");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/register.jsp");
+            dispatcher.include(request,response);
         }
     }
 
