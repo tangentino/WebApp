@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5704e8c4-f064-472d-91a5-366f83ebb613" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/database/SQLDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/database/SQLDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/database/SQLDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/User.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +57,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SQLDatabase">
-    <configuration name="SQLDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.muzoo.ooc.webapp.basic.database.SQLDatabase" />
+  <component name="RunManager" selected="Application.MySQLDatabase">
+    <configuration name="MySQLDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.muzoo.ooc.webapp.basic.mysql.MySQLDatabase" />
       <module name="webapp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.muzoo.ooc.webapp.basic.database.*" />
+          <option name="PATTERN" value="io.muzoo.ooc.webapp.basic.mysql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,7 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SQLDatabase" />
+        <item itemvalue="Application.MySQLDatabase" />
         <item itemvalue="Application.WebApp" />
       </list>
     </recent_temporary>

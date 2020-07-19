@@ -1,4 +1,4 @@
-package io.muzoo.ooc.webapp.basic.database;
+package io.muzoo.ooc.webapp.basic.mysql;
 
 import io.muzoo.ooc.webapp.basic.security.User;
 
@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SQLDatabase {
+public class MySQLDatabase {
 
     private static Connection getConnection() {
         Connection connection = null;
@@ -36,6 +36,7 @@ public class SQLDatabase {
                         set.getString(4),
                         set.getString(5)));
             }
+            set.close();
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -43,8 +44,4 @@ public class SQLDatabase {
         return userList;
     }
 
-    public static void main(String[] args) {
-        Map<String,User> ans = getAllUsers();
-        System.out.println(ans.get("tan").getSurname());
-    }
 }
