@@ -29,7 +29,7 @@ public class SQLDatabase {
             Connection connection = getConnection();
             ResultSet set = connection.createStatement().executeQuery("SELECT * FROM users");
             while (set.next()) {
-                // id | username | firstname | lastname | password
+                // 1 : id | 2 : username | 3 : firstname | 4 : surname | 5 : password
                 userList.put(set.getString(2),new User(
                         set.getString(2),
                         set.getString(3),
@@ -45,6 +45,6 @@ public class SQLDatabase {
 
     public static void main(String[] args) {
         Map<String,User> ans = getAllUsers();
-        System.out.println(ans.toString());
+        System.out.println(ans.get("tan").getSurname());
     }
 }
