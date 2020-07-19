@@ -44,14 +44,20 @@ public class MySQLDatabase {
         return userList;
     }
 
-    public static boolean addUser(String username, String firstname, String surname, String password) {
+    public static boolean addUser(Map<String,String> info) {
         Connection connection = getConnection();
-        if (MySQLAuthenticator.validateUsername(username,connection)) {
-            String[] temp = {username,firstname,surname,password};
-            MySQLAuthenticator.executeQuery("UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?",temp,connection);
+        if (MySQLAuthenticator.validateUsername(info.get("username"),connection)) {
+            String[] temp = {info.get("username"),info.get("firstname"),info.get("surname"),info.get("password")};
+            MySQLAuthenticator.executeQuery("INSERT INTO users (username,firstname,surname,password) VALUES (?,?,,?,?)",temp,connection);
             return true;
         }
         return false;
+    }
+
+    public static boolean editUser(Map<String,String> info) {
+        Connection connection = getConnection();
+        // "UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?"
+
     }
 
 }

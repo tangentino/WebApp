@@ -29,7 +29,7 @@
         <table style="width:100%">
             <tr>
                 <th>Username</th>
-                <th>Name</th>
+                <th>First Name</th>
                 <th>Surname</th>
                 <th></th>
             </tr>
@@ -37,7 +37,7 @@
                 <tr>
                     <td> ${user.getUsername()} </td>
                     <td> ${user.getFirstname()} </td>
-                    <td> ${user.getLastname()} </td>
+                    <td> ${user.getSurname()} </td>
                     <td>
                         <form action="/remove" method="post" class="rm-btn">
                             <input name="username" type="hidden" value="${curr.getUsername()}">

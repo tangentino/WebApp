@@ -3,6 +3,8 @@ package io.muzoo.ooc.webapp.basic.security;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class SecurityService {
@@ -18,6 +20,10 @@ public class SecurityService {
         Object usernameObject = session.getAttribute("username");
         return (String) usernameObject;
 
+    }
+
+    public User getCurrentUser(HttpServletRequest request) {
+        return userService.findByUsername(request.getParameter("username"));
     }
 
     public boolean isAuthorized(HttpServletRequest request) {
@@ -41,5 +47,14 @@ public class SecurityService {
             return true;
         }
         return false;
+    }
+
+    public boolean addUser(HttpServletRequest request) {
+        Map<String,String> info = new HashMap<>();
+        info.put("username",request.getParameter("username"));
+        info.put("firstname",request.getParameter("firstname"));
+        info.put("surname",request.getParameter("surname"));
+        info.put("password",request.getParameter("password"));
+        return userService.add
     }
 }
