@@ -1,16 +1,13 @@
 package io.muzoo.ooc.webapp.basic.security;
 
+import io.muzoo.ooc.webapp.basic.mysql.MySQLDatabase;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class UserService {
 
-    private static Map<String,User> users = new HashMap<>();
-
-    {
-        users.put("admin",new User("admin","Administrator","Administrator","12345"));
-        users.put("tan",new User("tan","Naran","Kongpithaksilp","abcdefg"));
-    }
+    private static Map<String,User> users = MySQLDatabase.getAllUsers();
 
     public User findByUsername(String username) {
         return users.get(username);

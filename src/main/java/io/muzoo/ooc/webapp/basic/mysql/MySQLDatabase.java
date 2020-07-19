@@ -44,4 +44,14 @@ public class MySQLDatabase {
         return userList;
     }
 
+    public static boolean addUser(String username, String firstname, String surname, String password) {
+        Connection connection = getConnection();
+        if (MySQLAuthenticator.validateUsername(username,connection)) {
+            String[] temp = {username,firstname,surname,password};
+            MySQLAuthenticator.executeQuery("UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?",temp,connection);
+            return true;
+        }
+        return false;
+    }
+
 }
