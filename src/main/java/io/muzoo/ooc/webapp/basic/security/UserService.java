@@ -8,8 +8,8 @@ public class UserService {
     private static Map<String,User> users = new HashMap<>();
 
     {
-        users.put("admin",new User("admin","12345"));
-        users.put("tan",new User("tan","abcdefg"));
+        users.put("admin",new User("admin","Administrator","Administrator","12345"));
+        users.put("tan",new User("tan","Naran","Kongpithaksilp","abcdefg"));
     }
 
     public User findByUsername(String username) {
