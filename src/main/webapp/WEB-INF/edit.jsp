@@ -22,9 +22,9 @@
         <table style="width:100%">
             <tr>
                 <th>Username</th>
-                <th>Password</th>
                 <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Surname</th>
+                <th>Password</th>
                 <th></th>
                 <th></th>
             </tr>
@@ -32,9 +32,9 @@
             <tr>
                 <input type="hidden" value="${user.getUsername()}" name="oldname" form="edit-f">
                 <td> <input type="text" value="${user.getUsername()}" name="username" form="edit-f" required></td>
-                <td> <input type="text" name="password" form="edit-f" required></td>
                 <td> <input type="text" value="${user.getFirstname()}" name="firstname" form="edit-f" required></td>
                 <td> <input type="text" value="${user.getSurname()}" name="surname" form="edit-f" required></td>
+                <td> <input type="text" name="password" form="edit-f" required></td>
                 <td> <input type="submit" value="Confirm" form="edit-f"> </td>
                 <td><input type="submit" value="Cancel" form="home"></td>
             </tr>

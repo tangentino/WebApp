@@ -68,5 +68,16 @@ public class SecurityService {
         return userService.editUser(info);
     }
 
+    public void removeUser(HttpServletRequest request) {
+        String username = request.getParameter("username");
+        if (username != null) {
+            userService.removeUser(username);
+        }
+    }
+
+    public void getUserList(HttpServletRequest request) {
+        request.setAttribute("userList",userService.getUserList());
+    }
+
 
 }

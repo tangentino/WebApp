@@ -5,7 +5,7 @@
 
 <script>
     function removeClick(){
-        return confirm('Do you want to remove this user?');
+        return confirm('Are you sure you want to remove this user?');
     }
 </script>
 
@@ -29,7 +29,7 @@
         <table style="width:100%">
             <tr>
                 <th>Username</th>
-                <th>First Name</th>
+                <th>Firstname</th>
                 <th>Surname</th>
                 <th></th>
             </tr>

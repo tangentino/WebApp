@@ -3,7 +3,7 @@ package io.muzoo.ooc.webapp.basic.security;
 import io.muzoo.ooc.webapp.basic.mysql.MySQLDatabase;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.Map;
 
 public class UserService {
@@ -16,6 +16,10 @@ public class UserService {
 
     public boolean checkIfUserExists(String username) {
         return users.containsKey(username);
+    }
+
+    public Collection<User> getUserList(){
+        return users.values();
     }
 
     private String encryptPassword(String password) {
@@ -41,4 +45,19 @@ public class UserService {
         }
         return false;
     }
+
+    public void removeUser(String username) {
+        if (MySQLDatabase.removeUser(username)) {
+            users = MySQLDatabase.getAllUsers();
+        }
+    }
+
+    public boolean checkPassword(String username, String password) {
+        User user = findByUsername(username);
+        if (user != null) {
+            return BCrypt.checkpw(password,user.getPassword());
+        }
+        return false;
+    }
+
 }

@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5704e8c4-f064-472d-91a5-366f83ebb613" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/AddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/EditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/SecurityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/database/SQLDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/SecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/SecurityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/security/UserService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MySQLDatabase">
+  <component name="RunManager" selected="Application.WebApp">
     <configuration name="MySQLDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="io.muzoo.ooc.webapp.basic.mysql.MySQLDatabase" />
       <module name="webapp" />
@@ -88,8 +95,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MySQLDatabase" />
         <item itemvalue="Application.WebApp" />
+        <item itemvalue="Application.MySQLDatabase" />
       </list>
     </recent_temporary>
   </component>

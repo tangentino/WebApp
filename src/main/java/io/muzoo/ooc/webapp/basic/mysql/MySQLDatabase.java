@@ -56,8 +56,23 @@ public class MySQLDatabase {
 
     public static boolean editUser(Map<String,String> info) {
         Connection connection = getConnection();
-        // "UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?"
         String[] temp = {info.get("username"),info.get("firstname"),info.get("surname"),info.get("password"),info.get("oldname")};
+        if (MySQLAuthenticator.validateEdit(info.get("oldname"),info.get("username"),connection)) {
+            MySQLAuthenticator.executeQuery("UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?",temp,connection);
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean removeUser(String username) {
+        Connection connection = getConnection();
+        String[] temp = {username};
+
+        if (MySQLAuthenticator.userExists(username,connection)) {
+            MySQLAuthenticator.executeQuery("DELETE FROM users WHERE username = ?",temp,connection);
+            return true;
+        }
+        return false;
     }
 
 }
