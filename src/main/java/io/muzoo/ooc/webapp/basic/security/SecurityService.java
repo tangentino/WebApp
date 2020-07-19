@@ -41,7 +41,7 @@ public class SecurityService {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = userService.findByUsername(username);
-        if (user != null && Objects.equals(user.getPassword(),password)) {
+        if (userService.checkPassword(username,password)) {
             HttpSession session = request.getSession();
             session.setAttribute("username",username);
             return true;
@@ -78,6 +78,4 @@ public class SecurityService {
     public void getUserList(HttpServletRequest request) {
         request.setAttribute("userList",userService.getUserList());
     }
-
-
 }

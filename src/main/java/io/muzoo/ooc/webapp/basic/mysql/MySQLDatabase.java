@@ -48,7 +48,7 @@ public class MySQLDatabase {
         Connection connection = getConnection();
         if (MySQLAuthenticator.validateUsername(info.get("username"),connection)) {
             String[] temp = {info.get("username"),info.get("firstname"),info.get("surname"),info.get("password")};
-            MySQLAuthenticator.executeQuery("INSERT INTO users (username,firstname,surname,password)"+" VALUES (?,?,,?,?)",temp,connection);
+            MySQLAuthenticator.executeQuery("INSERT INTO users (username,firstname,surname,password)"+" VALUES (?,?,?,?)",temp,connection);
             return true;
         }
         return false;
@@ -58,7 +58,7 @@ public class MySQLDatabase {
         Connection connection = getConnection();
         String[] temp = {info.get("username"),info.get("firstname"),info.get("surname"),info.get("password"),info.get("oldname")};
         if (MySQLAuthenticator.validateEdit(info.get("oldname"),info.get("username"),connection)) {
-            MySQLAuthenticator.executeQuery("UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?",temp,connection);
+            MySQLAuthenticator.executeQuery("UPDATE users SET username=?,firstname=?,surname=?,password=? WHERE username=?",temp,connection);
             return true;
         }
         return false;

@@ -19,6 +19,10 @@ public class User {
         return username;
     }
 
+    public String getFirstname() {
+        return firstname;
+    }
+
     public void setUsername(String username) {
         this.username = username;
     }

@@ -17,6 +17,7 @@ public class HomeServlet extends AbstractRoutableHttpServlet {
         if (securityService.isAuthorized(request)) {
             String username = securityService.getCurrentUsername(request);
             request.setAttribute("username",username);
+            securityService.getUserList(request);
 
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/home.jsp");
             requestDispatcher.include(request,response);

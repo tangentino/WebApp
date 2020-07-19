@@ -8,7 +8,11 @@ import java.util.Map;
 
 public class UserService {
 
-    private static Map<String,User> users = MySQLDatabase.getAllUsers();
+    private Map<String,User> users = MySQLDatabase.getAllUsers();
+
+    private void updateUsers() {
+        users = MySQLDatabase.getAllUsers();
+    }
 
     public User findByUsername(String username) {
         return users.get(username);
@@ -40,7 +44,7 @@ public class UserService {
         String password = info.get("password");
         info.put("password",encryptPassword(password));
         if (MySQLDatabase.editUser(info)) {
-            users = MySQLDatabase.getAllUsers();
+            updateUsers();
             return true;
         }
         return false;
@@ -48,7 +52,7 @@ public class UserService {
 
     public void removeUser(String username) {
         if (MySQLDatabase.removeUser(username)) {
-            users = MySQLDatabase.getAllUsers();
+            updateUsers();
         }
     }
 

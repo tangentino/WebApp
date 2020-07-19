@@ -33,20 +33,20 @@
                 <th>Surname</th>
                 <th></th>
             </tr>
-            <c:forEach items="${userList}" var="user">
+            <c:forEach items="${userList}" var="currentUser">
                 <tr>
-                    <td> ${user.getUsername()} </td>
-                    <td> ${user.getFirstname()} </td>
-                    <td> ${user.getSurname()} </td>
+                    <td> ${currentUser.getUsername()} </td>
+                    <td> ${currentUser.getFirstname()} </td>
+                    <td> ${currentUser.getSurname()} </td>
                     <td>
                         <form action="/remove" method="post" class="rm-btn">
-                            <input name="username" type="hidden" value="${curr.getUsername()}">
+                            <input name="username" type="hidden" value="${currentUser.getUsername()}">
                             <button type="submit" onclick="return removeClick();">Remove</button>
                         </form>
                     </td>
                     <td>
                         <form action="/edit" method="get">
-                            <input name="username" type="hidden" value="${curr.getUsername()}">
+                            <input name="username" type="hidden" value="${currentUser.getUsername()}">
                             <button type="submit">Edit</button>
                         </form>
                     </td>

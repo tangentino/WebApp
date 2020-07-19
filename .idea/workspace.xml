@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5704e8c4-f064-472d-91a5-366f83ebb613" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/RedirectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/RegisterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/RemoveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/mysql/MySQLDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/SecurityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/SecurityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/security/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/ServletRouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/muzoo/ooc/webapp/basic/servlets/ServletRouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/servlets/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/servlets/HomeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/servlets/ServletRouter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/muzoo/ooc/webapp/basic/servlets/ServletRouter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/home_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/home_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/home_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/home_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/login_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/login_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/tomcat.8082/work/Tomcat/localhost/ROOT/org/apache/jsp/WEB_002dINF/login_jsp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

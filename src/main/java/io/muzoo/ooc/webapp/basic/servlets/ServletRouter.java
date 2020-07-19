@@ -20,6 +20,8 @@ public class ServletRouter {
         servletClasses.add(LogoutServlet.class);
         servletClasses.add(AddServlet.class);
         servletClasses.add(EditServlet.class);
+        servletClasses.add(RemoveServlet.class);
+        servletClasses.add(RegisterServlet.class);
     }
 
     public void initialize(Context ctx) {
