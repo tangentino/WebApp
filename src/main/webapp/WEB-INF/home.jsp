@@ -24,7 +24,7 @@
     <title>Home Page</title>
     <body>
         <div>
-            <h2>Welcome, ${username}</h2>
+            <h2>Welcome, ${username}!</h2>
         </div>
         <table style="width:100%">
             <tr>

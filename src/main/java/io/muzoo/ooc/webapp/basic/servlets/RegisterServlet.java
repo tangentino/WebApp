@@ -16,7 +16,7 @@ public class RegisterServlet extends AbstractRoutableHttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("error","Error has occurred");
+        request.setAttribute("info","Error has occurred");
         if (securityService.addUser(request)) {
             response.sendRedirect("/");
         }
