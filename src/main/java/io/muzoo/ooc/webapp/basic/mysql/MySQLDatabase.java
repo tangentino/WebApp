@@ -57,7 +57,7 @@ public class MySQLDatabase {
     public static boolean editUser(Map<String,String> info) {
         Connection connection = getConnection();
         // "UPDATE users SET username=?,first=?,surname=?,password=? WHERE username=?"
-
+        String[] temp = {info.get("username"),info.get("firstname"),info.get("surname"),info.get("password"),info.get("oldname")};
     }
 
 }

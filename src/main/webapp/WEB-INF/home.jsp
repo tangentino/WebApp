@@ -33,7 +33,7 @@
                 <th>Surname</th>
                 <th></th>
             </tr>
-            <c:forEach items="${lst}" var="user">
+            <c:forEach items="${userList}" var="user">
                 <tr>
                     <td> ${user.getUsername()} </td>
                     <td> ${user.getFirstname()} </td>

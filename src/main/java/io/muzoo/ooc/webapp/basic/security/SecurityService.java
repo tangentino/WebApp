@@ -55,6 +55,18 @@ public class SecurityService {
         info.put("firstname",request.getParameter("firstname"));
         info.put("surname",request.getParameter("surname"));
         info.put("password",request.getParameter("password"));
-        return userService.add
+        return userService.addUser(info);
     }
+
+    public boolean editUser(HttpServletRequest request) {
+        Map<String,String> info = new HashMap<>();
+        info.put("oldname",request.getParameter("oldname"));
+        info.put("username",request.getParameter("username"));
+        info.put("password",request.getParameter("password"));
+        info.put("firstname",request.getParameter("firstname"));
+        info.put("surname",request.getParameter("surname"));
+        return userService.editUser(info);
+    }
+
+
 }

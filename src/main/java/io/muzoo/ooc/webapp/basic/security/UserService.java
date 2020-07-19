@@ -31,4 +31,14 @@ public class UserService {
         }
         return false;
     }
+
+    public boolean editUser(Map<String,String> info) {
+        String password = info.get("password");
+        info.put("password",encryptPassword(password));
+        if (MySQLDatabase.editUser(info)) {
+            users = MySQLDatabase.getAllUsers();
+            return true;
+        }
+        return false;
+    }
 }
