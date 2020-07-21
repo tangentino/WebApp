@@ -93,7 +93,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>webapp.basic.Webapp</mainClass>
+                                    <mainClass>io.muzoo.ooc.webapp.basic.WebApp</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

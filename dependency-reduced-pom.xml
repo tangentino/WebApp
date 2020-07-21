@@ -22,7 +22,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>webapp.basic.Webapp</mainClass>
+                  <mainClass>io.muzoo.ooc.webapp.basic.WebApp</mainClass>
                 </transformer>
               </transformers>
             </configuration>
