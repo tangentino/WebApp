@@ -12,7 +12,7 @@ public class WebApp {
 
     public static void main(String[] args) {
         Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8082);
+        tomcat.setPort(80);
 
         File docBase = new File("src/main/webapp/");
         docBase.mkdirs();
